@@ -1,0 +1,17 @@
+{
+    "name": "toby/melodey_vault",
+    "autoload": {
+        "psr-4": {
+            "Toby\\MelodeyVault\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Toby Gore",
+            "email": "tobyedwardgore+git@gmail.com"
+        }
+    ],
+    "require": {
+        "james-heinrich/getid3": "^1.9"
+    }
+}

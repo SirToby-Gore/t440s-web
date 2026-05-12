@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    // 1. Output Modern, Standalone JavaScript
+    // The key change: Do not generate module syntax (like import/export),
+    // which makes the output suitable for a simple <script> tag.
+    
+    // Target a recent, widely supported JavaScript version (e.g., ES2020)
+    "target": "es2020",
+
+    // 3. Essential Type Checking
+    // Enable all recommended strict type-checking options
+    "strict": true, 
+
+    // Don't check the default library files (for speed)
+    "skipLibCheck": true,
+    
+    // Remove unused imports to keep code clean
+    "noUnusedLocals": true
+  },
+  // Which files the compiler should look at
+  "include": [
+    "scripts.ts"
+  ]
+}
