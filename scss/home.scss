@@ -103,6 +103,8 @@ a {
         color: $color-white;
         font-size: 2rem;
         font-weight: 700;
+        width: 8rem;
+        aspect-ratio: auto;
     }
 
     &__nav {
@@ -185,9 +187,13 @@ a {
     gap: 3rem;
 
     &__logo {
+        color: $color-white;
         font-size: 2rem;
-        margin-bottom: 1rem;
+        font-weight: 700;
+        width: 8rem;
+        aspect-ratio: auto;
     }
+
 
     &__quote {
         margin-bottom: 2rem;

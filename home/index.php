@@ -14,12 +14,9 @@ require_once __DIR__ . '/../php/init.php';
 
     <div class="page">
 
-        <!-- NAVBAR -->
         <header class="navbar">
 
-            <div class="navbar__logo">
-                LOGO
-            </div>
+            <img class="navbar__logo" src="/favicon.jpg">
 
             <nav class="navbar__nav">
                 <a href="#" class="navbar__link">ABOUT</a>
@@ -41,7 +38,6 @@ require_once __DIR__ . '/../php/init.php';
 
         </header>
 
-        <!-- HERO -->
         <main class="hero">
 
             <h1 class="hero__title">
@@ -50,7 +46,7 @@ require_once __DIR__ . '/../php/init.php';
 
             <p class="hero__description">
                 Manage your money, save more money and budget smartly today
-                when you sign up with [INSERT]
+                when you sign up with The One App
             </p>
 
             <a href="/signup" class="button button--large">
@@ -63,7 +59,7 @@ require_once __DIR__ . '/../php/init.php';
         <footer class="footer">
 
             <div class="footer__brand">
-                <h2 class="footer__logo">LOGO</h2>
+                <img class="footer__logo" src="/favicon.jpg">
 
                 <p class="footer__quote">
                     QUOTE

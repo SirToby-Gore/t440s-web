@@ -54,6 +54,8 @@ a {
   color: #ffffff;
   font-size: 2rem;
   font-weight: 700;
+  width: 8rem;
+  aspect-ratio: auto;
 }
 .navbar__nav {
   display: flex;
@@ -108,8 +110,11 @@ a {
   gap: 3rem;
 }
 .footer__logo {
+  color: #ffffff;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  width: 8rem;
+  aspect-ratio: auto;
 }
 .footer__quote {
   margin-bottom: 2rem;
