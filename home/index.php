@@ -2,111 +2,140 @@
 
 require_once __DIR__ . '/../php/init.php';
 
+$activePage = 'home';
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <?= $header ?>
+
+    <title>Home | The One App</title>
+
 </head>
 
 <body>
 
     <div class="page">
 
-        <header class="navbar">
-
-            <img class="navbar__logo" src="/favicon.jpg">
-
-            <nav class="navbar__nav">
-                <a href="#" class="navbar__link">ABOUT</a>
-                <a href="#" class="navbar__link">FEATURES</a>
-                <a href="#" class="navbar__link">SUPPORT</a>
-                <a href="#" class="navbar__link">FAQ</a>
-                <a href="#" class="navbar__link">BLOG</a>
-            </nav>
-
-            <div class="navbar__actions">
-                <a href="/login" class="navbar__signin">
-                    SIGN IN
-                </a>
-
-                <a href="/signup" class="button button--small">
-                    SIGN UP
-                </a>
-            </div>
-
-        </header>
+        <?= $navbar ?>
 
         <main class="hero">
 
-            <h1 class="hero__title">
-                Take control of your finances
-            </h1>
+            <div class="container">
 
-            <p class="hero__description">
-                Manage your money, save more money and budget smartly today
-                when you sign up with The One App
-            </p>
+                <div class="hero__content">
 
-            <a href="/signup" class="button button--large">
-                SIGN UP
-            </a>
+                    <span class="section-label">
+                        Smart finance management
+                    </span>
+
+                    <h1 class="hero__title">
+                        Take control of your finances
+                    </h1>
+
+                    <p class="hero__description">
+                        Manage your spending, grow your savings, and build
+                        smarter financial habits with The One App.
+                    </p>
+
+                    <div class="hero__actions">
+
+                        <a href="/signup" class="button button--large">
+                            Get Started
+                        </a>
+
+                        <a href="/features" class="button button--outline">
+                            Explore Features
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </main>
 
-        <!-- FOOTER -->
-        <footer class="footer">
+        <section class="home-features section">
 
-            <div class="footer__brand">
-                <img class="footer__logo" src="/favicon.jpg">
+            <div class="container">
 
-                <p class="footer__quote">
-                    QUOTE
-                </p>
+                <div class="home-features__header">
 
-                <div class="footer__socials">
-                    <span class="footer__social-icon"></span>
-                    <span class="footer__social-icon"></span>
-                    <span class="footer__social-icon"></span>
-                    <span class="footer__social-icon"></span>
+                    <span class="section-label">
+                        Features
+                    </span>
+
+                    <h2 class="section-title">
+                        Everything you need in one place
+                    </h2>
+
                 </div>
+
+                <div class="home-features__grid">
+
+                    <article class="feature-card">
+
+                        <div class="feature-card__icon">
+                            $
+                        </div>
+
+                        <h3 class="feature-card__title">
+                            Budget Tracking
+                        </h3>
+
+                        <p class="feature-card__text">
+                            Track income and expenses with an easy-to-use
+                            budgeting dashboard.
+                        </p>
+
+                    </article>
+
+                    <article class="feature-card">
+
+                        <div class="feature-card__icon">
+                            %
+                        </div>
+
+                        <h3 class="feature-card__title">
+                            Savings Goals
+                        </h3>
+
+                        <p class="feature-card__text">
+                            Set goals, monitor progress, and build
+                            better saving habits over time.
+                        </p>
+
+                    </article>
+
+                    <article class="feature-card">
+
+                        <div class="feature-card__icon">
+                            #
+                        </div>
+
+                        <h3 class="feature-card__title">
+                            Smart Insights
+                        </h3>
+
+                        <p class="feature-card__text">
+                            Understand your spending with visual reports
+                            and personalised insights.
+                        </p>
+
+                    </article>
+
+                </div>
+
             </div>
 
-            <div class="footer__column">
-                <h3 class="footer__heading">
-                    CONTACT US
-                </h3>
+        </section>
 
-                <p class="footer__text">EMAIL</p>
-                <p class="footer__text">PHONE NUMBER</p>
-            </div>
-
-            <div class="footer__column">
-                <h3 class="footer__heading">
-                    LINKS
-                </h3>
-
-                <a href="#" class="footer__link">HOME</a>
-                <a href="#" class="footer__link">ABOUT</a>
-                <a href="#" class="footer__link">FEATURES</a>
-                <a href="#" class="footer__link">FAQ</a>
-                <a href="#" class="footer__link">SUPPORT</a>
-                <a href="#" class="footer__link">BLOG</a>
-            </div>
-
-            <div class="footer__column">
-                <h3 class="footer__heading">
-                    LEGAL
-                </h3>
-
-                <a href="#" class="footer__link">TERMS OF SERVICE</a>
-                <a href="#" class="footer__link">PRIVACY POLICY</a>
-                <a href="#" class="footer__link">COOKIES</a>
-                <a href="#" class="footer__link">EQUALITY AND DIVERSITY</a>
-            </div>
-
-        </footer>
+        <?= $footer ?>
 
     </div>
 
