@@ -1,23 +1,26 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-size: 14px;
 }
+
 .v35_140 {
   width: 100%;
   height: 1600px;
-  background: rgba(255,255,255,1);
+  background: rgb(255, 255, 255);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;
 }
+
 .v35_141 {
   width: 100%;
   height: 114px;
-  background: rgba(0,0,128,1);
+  background: rgb(0, 0, 128);
   padding: 42px 26px;
   margin: 124px;
   opacity: 1;
@@ -27,9 +30,10 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
+
 .v35_142 {
   width: 122px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 49px;
   left: 26px;
@@ -39,9 +43,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v35_144 {
   width: 122px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 49px;
   left: 272px;
@@ -51,10 +56,11 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v35_143 {
   width: 122px;
   height: 20px;
-  background: rgba(71,185,255,1);
+  background: rgb(71, 185, 255);
   margin: 10px;
   opacity: 0.5;
   position: absolute;
@@ -63,9 +69,10 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
+
 .v35_145 {
   width: 122px;
-  color: rgba(0,0,0,1);
+  color: rgb(0, 0, 0);
   position: absolute;
   top: 2px;
   left: 0px;
@@ -75,9 +82,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v35_146 {
   width: 122px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 49px;
   left: 764px;
@@ -87,9 +95,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v35_147 {
   width: 122px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 49px;
   left: 1010px;
@@ -99,9 +108,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v35_148 {
   width: 122px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 49px;
   left: 1256px;
@@ -111,9 +121,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v35_150 {
   width: 122px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 49px;
   left: 1502px;
@@ -123,10 +134,11 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_104 {
   width: 125px;
   height: 30px;
-  background: rgba(71,185,255,1);
+  background: rgb(71, 185, 255);
   margin: 10px;
   opacity: 1;
   position: absolute;
@@ -135,9 +147,10 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   overflow: hidden;
 }
+
 .v42_105 {
   width: 122px;
-  color: rgba(0,0,0,1);
+  color: rgb(0, 0, 0);
   position: absolute;
   top: 5px;
   left: 2px;
@@ -147,9 +160,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v35_169 {
   width: 375px;
-  color: rgba(0,0,0,1);
+  color: rgb(0, 0, 0);
   position: absolute;
   top: 165px;
   left: 773px;
@@ -159,10 +173,11 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_147 {
   width: 100%;
   height: 229px;
-  background: rgba(0,0,128,1);
+  background: rgb(0, 0, 128);
   padding: 49px 0px;
   margin: 10px;
   opacity: 1;
@@ -171,9 +186,10 @@ body {
   left: 0px;
   overflow: hidden;
 }
+
 .v42_148 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 49px;
   left: 0px;
@@ -183,9 +199,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_149 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 49px;
   left: 584px;
@@ -195,9 +212,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_150 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 49px;
   left: 1149px;
@@ -207,9 +225,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_151 {
   width: 142px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 49px;
   left: 1714px;
@@ -219,9 +238,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_152 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 79px;
   left: 0px;
@@ -231,9 +251,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_153 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 79px;
   left: 584px;
@@ -243,9 +264,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_154 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 79px;
   left: 1149px;
@@ -255,9 +277,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_155 {
   width: 142px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 79px;
   left: 1714px;
@@ -267,9 +290,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_156 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 96px;
   left: 584px;
@@ -279,9 +303,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_157 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 96px;
   left: 1149px;
@@ -291,9 +316,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_158 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 113px;
   left: 1149px;
@@ -303,9 +329,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_159 {
   width: 141px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 113px;
   left: 1714px;
@@ -315,9 +342,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_160 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 138px;
   left: 1149px;
@@ -327,9 +355,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_161 {
   width: 142px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 138px;
   left: 1714px;
@@ -339,9 +368,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_162 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 179px;
   left: 1149px;
@@ -351,9 +381,10 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_163 {
   width: 125px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 196px;
   left: 1149px;
@@ -363,6 +394,7 @@ body {
   opacity: 1;
   text-align: center;
 }
+
 .v42_164 {
   width: 143px;
   height: 24px;
@@ -377,6 +409,7 @@ body {
   left: 0px;
   overflow: hidden;
 }
+
 .v42_165 {
   width: 23px;
   height: 24px;
@@ -390,75 +423,83 @@ body {
   left: 0px;
   overflow: hidden;
 }
+
 .v42_166 {
   width: 23px;
   height: 24px;
-  background: rgba(255,255,255,1);
+  background: rgb(255, 255, 255);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
 }
+
 .v42_167 {
   width: 24px;
   height: 24px;
-  background: rgba(255,255,255,1);
+  background: rgb(255, 255, 255);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 40px;
   overflow: hidden;
 }
+
 .v42_168 {
   width: 24px;
   height: 24px;
-  background: rgba(255,255,255,1);
+  background: rgb(255, 255, 255);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
 }
+
 .v42_169 {
   width: 24px;
   height: 24px;
-  background: rgba(255,255,255,1);
+  background: rgb(255, 255, 255);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 80px;
   overflow: hidden;
 }
+
 .v42_170 {
   width: 24px;
   height: 18px;
-  background: rgba(255,255,255,1);
+  background: rgb(255, 255, 255);
   opacity: 1;
   position: absolute;
   top: 3px;
   left: 0px;
 }
+
 .v42_171 {
   width: 24px;
   height: 24px;
-  background: rgba(255,255,255,1);
+  background: rgb(255, 255, 255);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 120px;
   overflow: hidden;
 }
+
 .v42_172 {
   width: 24px;
   height: 24px;
-  background: rgba(255,255,255,1);
+  background: rgb(255, 255, 255);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
 }
+
 .v42_173 {
   width: 141px;
-  color: rgba(255,255,255,1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 96px;
   left: 1714px;
@@ -468,3 +509,5 @@ body {
   opacity: 1;
   text-align: center;
 }
+
+/*# sourceMappingURL=features.css.map */

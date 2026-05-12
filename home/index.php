@@ -11,111 +11,108 @@ require_once __DIR__ . '/../php/init.php';
 </head>
 
 <body>
-    <a href="/login">Log in</a>
 
-    <div class="v35">
+    <div class="page">
 
         <!-- NAVBAR -->
+        <header class="navbar">
 
-        <div class="v35">
-
-            <span class="v35">LOGO</span>
-
-            <span class="v35">ABOUT</span>
-
-            <span class="v35">FEATURES</span>
-
-            <span class="v35">SUPPORT</span>
-
-            <span class="v35">FAQ</span>
-
-            <span class="v35">BLOG</span>
-
-            <span class="v35">SIGN IN</span>
-
-            <div class="v42">
-                <span class="v35">SIGN UP</span>
+            <div class="navbar__logo">
+                LOGO
             </div>
 
-        </div>
+            <nav class="navbar__nav">
+                <a href="#" class="navbar__link">ABOUT</a>
+                <a href="#" class="navbar__link">FEATURES</a>
+                <a href="#" class="navbar__link">SUPPORT</a>
+                <a href="#" class="navbar__link">FAQ</a>
+                <a href="#" class="navbar__link">BLOG</a>
+            </nav>
+
+            <div class="navbar__actions">
+                <a href="/login" class="navbar__signin">
+                    SIGN IN
+                </a>
+
+                <a href="/signup" class="button button--small">
+                    SIGN UP
+                </a>
+            </div>
+
+        </header>
 
         <!-- HERO -->
+        <main class="hero">
 
-        <span class="v42">
-            Take control of your finances
-        </span>
+            <h1 class="hero__title">
+                Take control of your finances
+            </h1>
 
-        <span class="v42">
-            Manage your money, save more money and budget smartly today
-            when you sign up with [INSERT]
-        </span>
+            <p class="hero__description">
+                Manage your money, save more money and budget smartly today
+                when you sign up with [INSERT]
+            </p>
 
-        <div class="v42">
-            <span class="v42">SIGN UP</span>
-        </div>
+            <a href="/signup" class="button button--large">
+                SIGN UP
+            </a>
+
+        </main>
 
         <!-- FOOTER -->
+        <footer class="footer">
 
-        <div class="v35">
+            <div class="footer__brand">
+                <h2 class="footer__logo">LOGO</h2>
 
-            <span class="v35">LOGO</span>
+                <p class="footer__quote">
+                    QUOTE
+                </p>
 
-            <span class="v35">CONTACT US</span>
-
-            <span class="v35">LINKS</span>
-
-            <span class="v35">LEGAL</span>
-
-            <span class="v35">QUOTE</span>
-
-            <span class="v35">EMAIL</span>
-
-            <span class="v35">HOME</span>
-
-            <span class="v35">TERMS OF SERVICE</span>
-
-            <span class="v35">PHONE NUMBER</span>
-
-            <span class="v35">ABOUT</span>
-
-            <span class="v35">PRIVACY POLICY</span>
-
-            <span class="v35">FEATURES</span>
-
-            <span class="v35">COOKIES</span>
-
-            <span class="v35">FAQ</span>
-
-            <span class="v35">EQUALITY AND DIVERSITY</span>
-
-            <span class="v35">SUPPORT</span>
-
-            <span class="v35">BLOG</span>
-
-            <div class="v35">
-
-                <div class="v35">
-                    <div class="v35"></div>
+                <div class="footer__socials">
+                    <span class="footer__social-icon"></span>
+                    <span class="footer__social-icon"></span>
+                    <span class="footer__social-icon"></span>
+                    <span class="footer__social-icon"></span>
                 </div>
-
-                <div class="v35">
-                    <div class="v35"></div>
-                </div>
-
-                <div class="v35">
-                    <div class="v35"></div>
-                </div>
-
-                <div class="v35">
-                    <div class="v35"></div>
-                </div>
-
             </div>
 
-        </div>
+            <div class="footer__column">
+                <h3 class="footer__heading">
+                    CONTACT US
+                </h3>
+
+                <p class="footer__text">EMAIL</p>
+                <p class="footer__text">PHONE NUMBER</p>
+            </div>
+
+            <div class="footer__column">
+                <h3 class="footer__heading">
+                    LINKS
+                </h3>
+
+                <a href="#" class="footer__link">HOME</a>
+                <a href="#" class="footer__link">ABOUT</a>
+                <a href="#" class="footer__link">FEATURES</a>
+                <a href="#" class="footer__link">FAQ</a>
+                <a href="#" class="footer__link">SUPPORT</a>
+                <a href="#" class="footer__link">BLOG</a>
+            </div>
+
+            <div class="footer__column">
+                <h3 class="footer__heading">
+                    LEGAL
+                </h3>
+
+                <a href="#" class="footer__link">TERMS OF SERVICE</a>
+                <a href="#" class="footer__link">PRIVACY POLICY</a>
+                <a href="#" class="footer__link">COOKIES</a>
+                <a href="#" class="footer__link">EQUALITY AND DIVERSITY</a>
+            </div>
+
+        </footer>
 
     </div>
-
 
 </body>
 
