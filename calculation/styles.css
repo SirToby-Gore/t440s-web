@@ -1,0 +1,94 @@
+main.calculation .calculation {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	padding: 0.5rem;
+
+	border-radius: 0.5rem;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+main.calculation .calculation .calculator {
+	width: max-content;
+	
+	flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	
+	border-radius: 3rem;
+	padding: 2rem;
+	
+	gap: calc(2rem * 0.625);
+	
+	width: 90%;
+	
+	background-color: var(--secondary);
+}
+main.calculation .calculation .calculator .question {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	padding: calc(2rem * 0.391);
+	
+	gap: 2rem;
+	
+	background-color: var(--tertiary);
+	
+	width: 90%;
+	
+	align-self: center;
+	
+	border-radius: 1rem;
+}		
+main.calculation .calculation .calculator .question * {
+	color: var(--black);
+}
+main.calculation .calculation .calculator .question .marker-container {
+	display: flex;
+	flex-direction: column;
+	
+	align-items: center;
+}
+main.calculation .calculation .calculator .question .number {
+	font-family: monospace;
+}
+main.calculation .calculation .calculator .question .number::before {
+	content: 'No. ';
+}
+main.calculation .calculation .calculator .question .percent-marker::after {
+	content: '%';
+}
+main.calculation .calculation .calculator .answers {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 30%;
+
+	align-items: center;
+}
+main.calculation .calculation .calculator .answers .button {
+	margin: 1rem;
+}
+main.calculation .calculation .calculator .result {
+	color: var(--white);
+	font-size: 150%;
+}
+main.calculation .calculation .calculator .score {
+	color: var(--white);
+	font-size: 120%;
+	margin-left: 4rem;
+}
+main.calculation .calculation .buttons {
+	display: flex;
+	flex-direction: column;
+
+	gap: 2rem;
+
+	margin: 2rem;
+}

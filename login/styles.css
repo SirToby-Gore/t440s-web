@@ -1,0 +1,13 @@
+main.login .login-form input {
+	width: var(--element-width);
+}
+main.login .login-form div {
+	gap: 1rem *  0.625 ;
+	display: flex;
+	flex-direction: column;
+}
+	
+main.login .login-form button {
+	margin-top: calc(var(--element-width) * 0.02);
+	width: var(--element-width);
+}

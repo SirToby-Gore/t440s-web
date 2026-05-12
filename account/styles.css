@@ -1,0 +1,66 @@
+main.account .update-account .account-form .account-options {
+	gap: calc(var(--element-width) * 0.025);
+	
+	position: fixed;
+
+	--position-value: calc(var(--element-width) * 0.2);
+	right: var(--position-value);
+	bottom: var(--position-value);
+
+	z-index: 1;
+	padding: 1%;
+
+	border-radius: 5%;
+
+	background-color: var(--white);
+}
+
+/* styles for delete account subpage */
+main.account .delete-account {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--element-width) * 0.05);
+}
+main.account .delete-account button {
+	width: var(--element-width);
+}
+main.account .update-account .account-form div {
+	display: flex;
+	flex-direction: column;
+}
+main.account .update-account .account-form .email-input input,
+main.account .update-account .account-form .name-input input,
+main.account .update-account .account-form .password-input input,
+main.account .update-account .account-form .password-conf-input input,
+main.account .update-account .account-form .img-url-input input { 
+	width: clamp(20rem, 50%, 50rem);
+}
+
+main.account .delete-account {
+	--text-size: 3rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 100vw;
+	height: 100dvh;
+
+	gap: 1rem;
+
+}
+main.account .delete-account .title {
+	color: var(--black);
+	background-color: transparent;
+	font-size: calc(var(--text-size) *  1.6 );
+}
+main.account .delete-account .sub-text {
+	color: var(--black);
+	font-size: calc(var(--text-size) *  1.0 );
+}
+main.account .delete-account button {
+	width: calc(var(--text-size) * 15);
+	height: var(--text-size);
+	font-weight: var(--text-size);
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account</title>
+<link rel="stylesheet" href="../src/css/styles.css">
+<link rel="stylesheet" href="../account/styles.css">
+<link rel="shortcut icon" href="../src/assets/images/favicon.svg" type="image/x-icon"></head>
+<body>
+	<nav class="navbar">
+<span class="rolsa-logo">Rolsa</span>
+<ul class="links">
+<a href="../home/" title="home"><img src="../src/assets/icons/home.svg"></a>
+<a href="../consultation/" title="consultation"><img src="../src/assets/icons/consultation.svg"></a>
+<a href="../calculation/" title="calculation"><img src="../src/assets/icons/calc.svg"></a>
+</ul>
+<a class="account-icon" href="../account/" title="account settings">
+<img src="../src/assets/images/placeholder-profile.jpg" alt="profile picture">
+<p class="username capitalise">john smith</p>
+</a>
+</nav>	
+	<main class="account">
+		<section class="delete-account">
+			<h2 class="title">Delete your account?:</h2>
+			<p class="sub-text">This is a permanent, your account can not be recovered</p>
+		
+			<button href="delete_account.php" class="delete button" onclick="window.location.href = 'delete_account.php?conf=1';">delete</button>
+			<button type="button" class="secondary button" onclick="window.location.href = './';">cancel</button>
+		</section>
+	</main>
+    <footer class="footer">
+<div class="left">
+<div class="contact-info">
+<a href="tel:01248 567800" class="telephone">01248 567800</a>
+<a href="mailto:info@rolsa.co.uk" class="email">info@rolsa.co.uk</a>
+</div>
+<address class="address">
+<span class="address-line">142</span>
+<span class="address-line">Duke Street</span>
+<span class="address-line">Norwich</span>
+<span class="address-line">NR3 1DL</span>
+</address>
+</div>
+<div class="right">
+<h2 class="rolsa-logo">ROLSA</h2>
+<span class="copyright">ROLSA&copy;2025</span>
+<div id="accessibility-buttons-container"></div>
+</div>
+<script src="../src/js/accessibility_buttons.js"></script>
+</footer></body>
+</html>

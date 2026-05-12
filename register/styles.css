@@ -1,0 +1,16 @@
+main.register section.register {
+	display: flex;
+	flex-direction: column;
+}
+main.register section.register .register-form div {
+	display: flex;
+	flex-direction: column;
+}
+main.register section.register .register-form div input {
+	max-width: var(--element-width);
+}
+main.register section.register .register-form .account-options {
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--element-width) * 0.02);
+}

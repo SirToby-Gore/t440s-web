@@ -1,0 +1,95 @@
+main.home {
+	padding-top: 0 !important;
+}
+main.home section.title {
+	padding-top: 10rem !important;
+	background-color: var(--primary);
+
+	/* min height of 60% of the screen view height when the top url bar is or isn't visible */
+	min-height: 60dvh;
+
+	max-width: 100%;
+
+	display: flex;
+	flex-direction: column;
+}
+main.home section.title	.title-text {
+	align-self: flex-start;
+		
+	margin: 0;
+	padding: 0;
+	
+	color: var(--white);
+	/* sets a min width, reactive width, and max width  */
+	font-size: min(20rem, 60vw);
+	
+	font-family: "Birthstone", cursive;
+}
+main.home section.title .splash-text {
+	color: var(--white);
+	font-family: monospace;
+	align-self: center;
+
+	font-size: 2.5rem;
+}
+main.home section.news {
+	--spacer: 5rem;
+
+	padding: calc(var(--spacer) *  0.625);
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacer);
+
+	max-width: 100%;
+	
+	overflow: hidden;
+}
+main.home section.news article.article {
+	background-color: var(--secondary);
+	
+	border-radius: calc(var(--spacer) *  0.625);
+
+	max-width: 60%;
+	padding: calc(var(--spacer) *  0.391);
+
+	display: flex;
+	flex-direction: column;
+	gap: calc(var(--spacer) * 0.244);
+}
+/* every other child gets put either left or right aligned */
+main.home section.news article.article:nth-child(even) {
+	align-self: flex-end;
+}
+main.home section.news article.article:nth-child(odd) {
+	align-self: flex-start;
+}
+main.home section.news * {
+	color: var(--white);
+	padding: 0;
+	margin: 0;
+}
+main.home section.news article.article h2.title {
+	background-color: transparent;
+	text-decoration: underline;
+	color: var(--white);
+	font-weight: bolder;
+	font-size: calc(var(--spacer) *  0.391);
+}
+
+main.home section.news article.article .content {
+	color: var(--white);
+	font-size: calc(var(--spacer) * 0.244);
+}
+
+main.home section.news article.article .call-to-action {
+	--size: calc(var(--spacer) *  1.6);
+	--colour: var(--black);
+	--background-colour: var(--primary);
+
+	max-width: fit-content;
+
+	font-size: calc(var(--spacer) * 0.244);
+
+	border-color: transparent;
+}

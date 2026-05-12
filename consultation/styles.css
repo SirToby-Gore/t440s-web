@@ -1,0 +1,79 @@
+main.consolations .bookings {
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+	
+	margin: 1rem;
+	margin-top: 10rem;
+
+	border-radius: calc(2rem * 1.6);
+
+	padding: 1.6rem;
+	
+	background-color: var(--secondary);
+	width: 80%;
+	min-width: 50rem;
+}
+main.consolations .bookings .booking {
+	border-radius: 1.6rem;
+	
+	background-color: var(--primary);
+
+	padding: 1.6rem;
+
+	color: var(--white);
+	font-weight: bolder;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main.consolations .bookings .booking .options {
+	display: inline-flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+main.consolations .bookings .booking .options span {
+	text-transform: uppercase;
+}
+/* puts a dot between options */
+main.consolations .bookings .booking .options span:not(:last-child)::after {
+	content: '.';
+	margin-left: 1rem;
+}
+main.consolations .bookings .booking .location::before {
+	font-weight: normal;
+	content: 'booked at';
+	margin-right: 1rem;
+}
+main.consolations .bookings .booking .date::before {
+	font-weight: normal;
+	content: 'booked for:';
+	margin-right: 1rem;
+}
+
+main.delete-booking {
+	--text-size: 3rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	width: 100vw;
+	height: 100dvh;
+
+	gap: 1rem;
+
+}
+main.delete-booking .title {
+		color: var(--white);
+		background-color: transparent;
+		font-size: calc(var(--text-size) *  1.6 );
+}
+main.delete-booking .sub-text {
+		color: var(--white);
+		font-size: calc(var(--text-size) *  1.0 );
+}
+main.delete-booking button {
+	width: calc(var(--text-size) * 15);
+	height: var(--text-size);
+	font-weight: var(--text-size);
+}

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>login</title>
+<link rel="stylesheet" href="../src/css/styles.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="../src/assets/images/favicon.svg" type="image/x-icon"></head>
+<body>
+	<nav class="navbar">
+<span id="rolsa-logo">Rolsa</span>
+<ul class="links">
+<a href="../home/" title="home">home</a>
+<a href="../consultation/" title="consultation">consultation</a>
+<a href="../calculation/" title="calculation">calculation</a>
+</ul>
+<button class="login-button button capitalise" onclick="window.location.href = '../login/ '" title="login">login</button>
+</nav>	
+	<main class="login">
+		<section class="login">
+			<h1 class="sub-heading capitalise">login</h1>
+			<form action="login.php" method="post" class="login-form">
+				<!-- email div to hold the user's email -->
+				<div class="email">
+					<label for="email" class="label">email</label>
+					<!-- using cookies to hold the user's email if it is invalid and where sent back from the login -->
+					<input type="email" name="email" placeholder="john.smith@example.com" required value="">
+				</div>
+				
+				<!-- password element to hold the user's password input and the toggle password button -->
+				<div class="password">
+					<label for="password" class="label">password</label>
+					<!-- using cookies to store the user's password if they where sent back from the login -->
+					<input id="password-input" type="password" name="password" placeholder="password 1234" required minlength="8" value="">
+					<button type="button" id="toggle-password-button" class="secondary button">toggle password</button>
+				</div>
+				
+				<!-- displays an error message -->
+				<p class="feedback-text small error"></p>
+				
+				<div class="account-options">
+					<input type="submit" value="Login" class="primary button">
+					<button class="secondary button" onclick="window.location.href = '../register/'">register</button>
+				</div>
+			</form>
+		</section>
+	</main>
+    <?= render_footer() ?>
+
+	<script src="../src/js/password_button.js"></script>
+</body>
+</html>

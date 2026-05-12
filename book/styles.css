@@ -1,0 +1,16 @@
+main.book .create-booking .create-booking .input-field {
+	overflow: visible;
+	display: flex;
+	flex-direction: column;
+
+	width: min(var(--element-width), 100%);
+}
+main.book .create-booking .create-booking .system {
+	flex-direction: row;
+} 
+main.book .create-booking .create-booking .system input[type=checkbox] {
+	margin-right: 5rem;
+} 
+main.book .create-booking .create-booking .address input[type=text] {
+	margin-bottom: 1.2rem;
+}

@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>account</title>
+<link rel="stylesheet" href="../src/css/styles.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="shortcut icon" href="../src/assets/images/favicon.svg" type="image/x-icon"></head>
+<body>
+	<nav class="navbar">
+<span id="rolsa-logo">Rolsa</span>
+<ul class="links">
+<a href="../home/" title="home">home</a>
+<a href="../consultation/" title="consultation">consultation</a>
+<a href="../calculation/" title="calculation">calculation</a>
+</ul>
+<a class="account-icon" href="../account/" title="account settings">
+<img src="../src/assets/images/placeholder-profile.jpg" alt="profile picture">
+<p class="username capitalise">e</p>
+</a>
+</nav>
+	<main class="account">
+		<section class="update-account">
+			<h2 class="sub-heading capitalise"></h2>
+			<form action="update_account_info.php" class="account-form" method="post">
+				<div class="email-input">
+					<!-- displays an email input with a cached value pre-loaded if available -->
+					<label for="email" class="label">email</label>
+					<input type="email" name="email" id="email" required value="e@e.com">
+				</div>
+				
+				<div class="name-input">
+					<!-- displays a username input and pre-loads a value if one has been cached -->
+					<label for="username" class="label">name</label>
+					<input type="username" name="username" id="username" required value="e">
+				</div>
+				
+				<div class="password-input">
+					<!-- shows an input area for the password and holds a cached value if one is available -->
+					<label for="password" class="label">password</label>
+					<input type="password" name="password" id="password" required value="password">
+				</div>
+				
+				<div class="password-conf-input">
+					<!-- takes the user confirmation for their email incase they have a typo in their password -->
+					<label for="password-conf" class="label">confirm password</label>
+					<input type="password" name="password-conf" id="password-conf" required value="password">
+				</div>
+				
+				<button type="button" class="secondary button" id="toggle-password-button">toggle password</button>
+				
+				<div class="img-url-input">
+					<!-- takes an optional input for the user if they want a profile picture -->
+					<label for="img-url">profile picture</label>
+					<input type="file" name="img-url" id="img-url" value="upload" placeholder="../assets/images/placeholder-profile.jpg" value="">
+				</div>
+
+				<!-- displays an error message if one is applicable -->
+								
+				<!-- account options -->
+				<div class="account-options">
+					<input class="primary button" type="submit" value="Update">
+					<a class="secondary button" href="logout.php">logout</a>
+					<a type="button" class="delete button" href="delete_account.php">Delete account</a>
+				</div>
+			</form>
+		</section>
+	</main>
+    <?= render_footer() ?>
+
+	<script src="../src/js/password_button.js"></script>
+</body>
+</html>
