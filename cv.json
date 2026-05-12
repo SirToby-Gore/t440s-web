@@ -1,0 +1,92 @@
+{
+    "name": "toby gore",
+    "about me": "I am a local boy from Suffolk, living in a small village for the best part of the last two decades. I am community-minded and driven, and always willing to help.",
+    "experiences": [
+        {
+            "title": "Weekend sales assistant",
+            "date from": "JUN 2024",
+            "date until": "SEP 2025",
+            "location": "Cherry Lane",
+            "description": "A promotion from a temporary to a permanent contract at Pulham."
+        },
+        {
+            "title": "Work placement",
+            "date from": "JUL 2024",
+            "date until": "DEC 2024",
+            "location": "Netscout",
+            "description": "This was an unpaid office job that evolved into a 4-day work week, where I worked with a team on projects and tools for the business."
+        },
+        {
+            "title": "Temp Weekend Sales Assistant",
+            "date from": "MAR (2024 & 2025)",
+            "date until": "JUN (2024 & 2025)",
+            "location": "Cherry Lane",
+            "description": "Stocking shelves, till operation, customer assistance, and plant maintenance and care."
+        },
+        {
+            "title": "Freelance Labourer",
+            "date": "AUG 2023",
+            "location": "Brome & Oakley Almshouses",
+            "description": "Hand-shifting 4.5 tonnes of shingle for my village's trust."
+        },
+        {
+            "title": "Freelance Labourer",
+            "date": "JUL 2022 & MAY 2023",
+            "location": "Mr. Bamber",
+            "description": "Working for a private individual to help set up and run two events."
+        },
+        {
+            "title": "Egg Packing",
+            "date": "ad hoc",
+            "location": "Havens Field Happy Hens",
+            "description": "Providing holiday cover for a local egg producer."
+        }
+    ],
+    "education": [
+        {
+            "title": "Software Engineering",
+            "date from": "SEP 2025",
+            "date until": null,
+            "location": "Bournemouth University",
+            "description": "An honours degree sandwich 4-year course on software engineering."
+        },
+        {
+            "title": "Software Development T-level",
+            "date from": "SEP 2023",
+            "date until": "JUL 2025",
+            "location": "West Suffolk College",
+            "description": "Merit. Problem-solving, programming, ethics, legislation, business, data, security, project planning, and 315+ hours in a placement."
+        },
+        {
+            "title": "GCSEs",
+            "date from": "SEP 2018",
+            "date until": "JUL 2023",
+            "location": "Hartismere School",
+            "description": "Computing-8, Science combined H-7/7, Maths-7, Food Prep & Nutrition-6, English Lang-5 Lit-4, Geography-4, Music-3, Citizenship-3"
+        }
+    ],
+    "volunteering": [
+        {
+            "title": "School Prefect of Debating",
+            "date": "SEP 2023",
+            "description": "Appointed as School Prefect of Debating, and led the school to win many debates."
+        },
+        {
+            "title": "DofE Bronze",
+            "date": "SEP 2022",
+            "description": "Completed the DofE Bronze award to become a more well-rounded person. I helped the local cricket club, cycled to school, and learned to play piano."
+        },
+        {
+            "title": "Public Speaking",
+            "date": "MAY 2022",
+            "description": "Achieved 3rd place within the entire year group."
+        }
+    ],
+    "contact": {
+        "phone": "07943 600797",
+        "email": "tobyedwardgore@gmail.com",
+        "linkedin": "Toby-gore-B4021626b",
+        "linkedin href": "https://www.linkedin.com/in/toby-gore-b4021626b/"
+    },
+    "passion": "My interests are in cycling, walking, kayaking, music festivals, baking, and sailing. In any way I can, I try to get out and enjoy the great outdoors."
+}

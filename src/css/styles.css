@@ -1,0 +1,131 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main.cv {
+  padding: 3rem 1.6rem;
+  background-color: var(--background);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main.cv header.name {
+  border: var(--border-width) var(--primary-colour) solid;
+  color: var(--primary-text-colour);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  border-radius: 2px;
+}
+main.cv div.body {
+  display: flex;
+  flex-direction: row;
+}
+main.cv div.body * {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main.cv div.body h2.title {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+  color: var(--secondary-text-colour);
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+main.cv div.body h3.sub-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 1rem;
+}
+main.cv div.body h3.sub-title span {
+  text-transform: uppercase;
+  color: var(--secondary-text-colour);
+  font-weight: bold;
+}
+main.cv div.body h3.sub-title span:not(:last-child)::after {
+  content: " | ";
+}
+main.cv div.body p.description {
+  margin: 0;
+  margin-bottom: 0.6rem;
+}
+main.cv div.body div#left-column {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main.cv div.body div#left-column article.about-me {
+  align-content: center;
+  color: var(--secondary-text-colour);
+}
+main.cv div.body div#left-column div.section-2 {
+  border: var(--primary-colour) var(--border-width) solid;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+main.cv div.body div#right-column {
+  flex: 1;
+  transform: translate(calc(-1 * var(--border-width) + 1px), 0);
+}
+main.cv div.body div#right-column div.section-2 div.volunteering {
+  background-color: var(--primary-colour);
+  padding: 1.6rem calc(1.6rem + var(--border-width));
+  text-align: left;
+}
+main.cv div.body div#right-column div.section-2 div.contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: left;
+  padding-left: 30%;
+}
+main.cv div.body div#right-column div.section-2 div.contact ul a {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--secondary-text-colour);
+  list-style: none;
+  align-items: center;
+}
+main.cv div.body div#right-column div.section-2 div.contact ul a:hover, main.cv div.body div#right-column div.section-2 div.contact ul a:active, main.cv div.body div#right-column div.section-2 div.contact ul a:focus-visible {
+  text-decoration: underline;
+}
+main.cv div.body div#right-column div.section-2 div.contact ul a svg {
+  aspect-ratio: 1;
+  width: 1.6rem;
+  background-color: var(--primary-colour);
+  padding: 0.4rem;
+  border-radius: 50%;
+  border: none;
+}
+main.cv div.body div#right-column div.section-2 div.passion {
+  border: var(--primary-colour) solid var(--border-width);
+  padding: 1rem;
+}
+
+@media screen and (max-width: 820px) {
+  body {
+    padding: 1rem;
+  }
+  main.cv div.body {
+    flex-direction: column;
+  }
+  main.cv div.body div#right-column {
+    transform: none;
+  }
+  main.cv div.body div#right-column div.section-2 div.contact ul {
+    padding-left: 10%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
