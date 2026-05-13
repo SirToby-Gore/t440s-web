@@ -13,33 +13,37 @@ class Report
         public string $generated_at,
     ) {}
 
-    public static function from_id(mysqli $connection, string $report_id): ?self
+    public static function from_id(string $report_id): ?self
     {
-        $statement = $connection->prepare('SELECT * FROM `Reports` WHERE `report_id` = ?');
-        $statement->bind_param('s', $report_id);
-        $statement->execute();
-        $result = $statement->get_result()->fetch_assoc();
+        global $conn;
+        $stmt = $conn->prepare('SELECT * FROM `Reports` WHERE `report_id` = ?');
+        $stmt->bind_param('s', $report_id);
+        $stmt->execute();
+        $result = $stmt->get_result()->fetch_assoc();
         return $result ? new self(...$result) : null;
     }
 
-    public function create(mysqli $connection): bool
+    public function create(): bool
     {
-        $statement = $connection->prepare('INSERT INTO `Reports` (`report_id`, `manager_id`, `title`, `type`, `content`, `generated_at`) VALUES (?, ?, ?, ?, ?, ?)');
-        $statement->bind_param('ssssss', $this->report_id, $this->manager_id, $this->title, $this->type, $this->content, $this->generated_at);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('INSERT INTO `Reports` (`report_id`, `manager_id`, `title`, `type`, `content`, `generated_at`) VALUES (?, ?, ?, ?, ?, ?)');
+        $stmt->bind_param('ssssss', $this->report_id, $this->manager_id, $this->title, $this->type, $this->content, $this->generated_at);
+        return $stmt->execute();
     }
 
-    public function update(mysqli $connection): bool
+    public function update(): bool
     {
-        $statement = $connection->prepare('UPDATE `Reports` SET `manager_id` = ?, `title` = ?, `type` = ?, `content` = ?, `generated_at` = ? WHERE `report_id` = ?');
-        $statement->bind_param('ssssss', $this->manager_id, $this->title, $this->type, $this->content, $this->generated_at, $this->report_id);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('UPDATE `Reports` SET `manager_id` = ?, `title` = ?, `type` = ?, `content` = ?, `generated_at` = ? WHERE `report_id` = ?');
+        $stmt->bind_param('ssssss', $this->manager_id, $this->title, $this->type, $this->content, $this->generated_at, $this->report_id);
+        return $stmt->execute();
     }
 
-    public function delete(mysqli $connection): bool
+    public function delete(): bool
     {
-        $statement = $connection->prepare('DELETE FROM `Reports` WHERE `report_id` = ?');
-        $statement->bind_param('s', $this->report_id);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('DELETE FROM `Reports` WHERE `report_id` = ?');
+        $stmt->bind_param('s', $this->report_id);
+        return $stmt->execute();
     }
 }

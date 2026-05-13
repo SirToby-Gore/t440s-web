@@ -2,6 +2,11 @@
 
 require_once __DIR__ . '/classes/_classes.php';
 require_once __DIR__ . '/html_parts.php';
+require_once __DIR__ . '/functions.php';
+
+if (PHP_SESSION_NONE == session_status()) {
+    session_start();
+}
 
 $env = parse_ini_file('.env');
 
@@ -13,4 +18,3 @@ $conn = mysqli_connect(
 );
 
 $account = Account::get_account();
-

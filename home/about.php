@@ -11,7 +11,7 @@ $activePage = 'about';
 
 <head>
 
-    <?= $header ?>
+    <?= html_get_header() ?>
 
     <title>About | The One App</title>
 
@@ -20,17 +20,13 @@ $activePage = 'about';
 <body>
 
     <div class="page">
-        <?= $navbar ?>
+        <?= html_get_navbar() ?>
 
         <main class="about section">
 
             <div class="container">
 
                 <div class="about__header">
-
-                    <span class="section-label">
-                        ABOUT US
-                    </span>
 
                     <h1 class="section-title">
                         Helping you take control of your finances
@@ -46,39 +42,39 @@ $activePage = 'about';
 
                 <div class="about__grid">
 
-                    <article class="info-card">
+                    <article class="card">
 
-                        <h2 class="info-card__title">
+                        <h2 class="card__title">
                             Our Mission
                         </h2>
 
-                        <p class="info-card__text">
+                        <p class="card__text">
                             We aim to make personal finance simple,
                             accessible, and stress-free for everyone.
                         </p>
 
                     </article>
 
-                    <article class="info-card">
+                    <article class="card">
 
-                        <h2 class="info-card__title">
+                        <h2 class="card__title">
                             Smart Budgeting
                         </h2>
 
-                        <p class="info-card__text">
+                        <p class="card__text">
                             Track spending, build healthy habits,
                             and stay in control with intuitive tools.
                         </p>
 
                     </article>
 
-                    <article class="info-card">
+                    <article class="card">
 
-                        <h2 class="info-card__title">
+                        <h2 class="card__title">
                             Future Focused
                         </h2>
 
-                        <p class="info-card__text">
+                        <p class="card__text">
                             We continuously improve our platform
                             with features built around real user needs.
                         </p>
@@ -91,7 +87,7 @@ $activePage = 'about';
 
         </main>
 
-        <?= $footer ?>
+        <?= html_get_footer() ?>
 
     </div>
 

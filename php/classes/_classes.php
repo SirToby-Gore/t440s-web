@@ -9,5 +9,5 @@ require_once __DIR__ . '/token.php';
 require_once __DIR__ . '/transaction.php';
 require_once __DIR__ . '/user.php';
 require_once __DIR__ . '/user_dashboard.php';
-
+require_once __DIR__ . '/random.php';
 require_once __DIR__ . '/account.php';

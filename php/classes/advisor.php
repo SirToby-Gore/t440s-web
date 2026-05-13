@@ -10,33 +10,37 @@ class Advisor
         public string $specialization,
     ) {}
 
-    public static function from_id(mysqli $connection, string $advisor_id): ?self
+    public static function from_id(string $advisor_id): ?self
     {
-        $statement = $connection->prepare('SELECT * FROM `Advisors` WHERE `advisor_id` = ?');
-        $statement->bind_param('s', $advisor_id);
-        $statement->execute();
-        $result = $statement->get_result()->fetch_assoc();
+        global $conn;
+        $stmt = $conn->prepare('SELECT * FROM `Advisors` WHERE `advisor_id` = ?');
+        $stmt->bind_param('s', $advisor_id);
+        $stmt->execute();
+        $result = $stmt->get_result()->fetch_assoc();
         return $result ? new self(...$result) : null;
     }
 
-    public function create(mysqli $connection): bool
+    public function create(): bool
     {
-        $statement = $connection->prepare('INSERT INTO `Advisors` (`advisor_id`, `user_id`, `specialization`) VALUES (?, ?, ?)');
-        $statement->bind_param('sss', $this->advisor_id, $this->user_id, $this->specialization);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('INSERT INTO `Advisors` (`advisor_id`, `user_id`, `specialization`) VALUES (?, ?, ?)');
+        $stmt->bind_param('sss', $this->advisor_id, $this->user_id, $this->specialization);
+        return $stmt->execute();
     }
 
-    public function update(mysqli $connection): bool
+    public function update(): bool
     {
-        $statement = $connection->prepare('UPDATE `Advisors` SET `user_id` = ?, `specialization` = ? WHERE `advisor_id` = ?');
-        $statement->bind_param('sss', $this->user_id, $this->specialization, $this->advisor_id);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('UPDATE `Advisors` SET `user_id` = ?, `specialization` = ? WHERE `advisor_id` = ?');
+        $stmt->bind_param('sss', $this->user_id, $this->specialization, $this->advisor_id);
+        return $stmt->execute();
     }
 
-    public function delete(mysqli $connection): bool
+    public function delete(): bool
     {
-        $statement = $connection->prepare('DELETE FROM `Advisors` WHERE `advisor_id` = ?');
-        $statement->bind_param('s', $this->advisor_id);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('DELETE FROM `Advisors` WHERE `advisor_id` = ?');
+        $stmt->bind_param('s', $this->advisor_id);
+        return $stmt->execute();
     }
 }

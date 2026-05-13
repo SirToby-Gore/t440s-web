@@ -12,33 +12,37 @@ class Client
         public string $notes,
     ) {}
 
-    public static function from_id(mysqli $connection, string $client_id): ?self
+    public static function from_id(string $client_id): ?self
     {
-        $statement = $connection->prepare('SELECT * FROM `Clients` WHERE `client_id` = ?');
-        $statement->bind_param('s', $client_id);
-        $statement->execute();
-        $result = $statement->get_result()->fetch_assoc();
+        global $conn;
+        $stmt = $conn->prepare('SELECT * FROM `Clients` WHERE `client_id` = ?');
+        $stmt->bind_param('s', $client_id);
+        $stmt->execute();
+        $result = $stmt->get_result()->fetch_assoc();
         return $result ? new self(...$result) : null;
     }
 
-    public function create(mysqli $connection): bool
+    public function create(): bool
     {
-        $statement = $connection->prepare('INSERT INTO `Clients` (`client_id`, `advisor_id`, `user_id`, `status`, `notes`) VALUES (?, ?, ?, ?, ?)');
-        $statement->bind_param('sssss', $this->client_id, $this->advisor_id, $this->user_id, $this->status, $this->notes);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('INSERT INTO `Clients` (`client_id`, `advisor_id`, `user_id`, `status`, `notes`) VALUES (?, ?, ?, ?, ?)');
+        $stmt->bind_param('sssss', $this->client_id, $this->advisor_id, $this->user_id, $this->status, $this->notes);
+        return $stmt->execute();
     }
 
-    public function update(mysqli $connection): bool
+    public function update(): bool
     {
-        $statement = $connection->prepare('UPDATE `Clients` SET `advisor_id` = ?, `user_id` = ?, `status` = ?, `notes` = ? WHERE `client_id` = ?');
-        $statement->bind_param('sssss', $this->advisor_id, $this->user_id, $this->status, $this->notes, $this->client_id);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('UPDATE `Clients` SET `advisor_id` = ?, `user_id` = ?, `status` = ?, `notes` = ? WHERE `client_id` = ?');
+        $stmt->bind_param('sssss', $this->advisor_id, $this->user_id, $this->status, $this->notes, $this->client_id);
+        return $stmt->execute();
     }
 
-    public function delete(mysqli $connection): bool
+    public function delete(): bool
     {
-        $statement = $connection->prepare('DELETE FROM `Clients` WHERE `client_id` = ?');
-        $statement->bind_param('s', $this->client_id);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('DELETE FROM `Clients` WHERE `client_id` = ?');
+        $stmt->bind_param('s', $this->client_id);
+        return $stmt->execute();
     }
 }

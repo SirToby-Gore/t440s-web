@@ -2,10 +2,42 @@
 
 require_once __DIR__ . '/../php/init.php';
 
+if (isset($_GET['logout'])) {
+    $account->token->delete();
+    unset($_SESSION['token']);
+    header('Location: /home');
+}
+
 $email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
 
 $activePage = 'login';
+
+
+$i = 0;
+$email_or_password_invalid = 1 << $i++;
+
+function login(): int
+{
+    global $email;
+    global $password;
+
+    global $email_or_password_invalid;
+
+    $code = 0;
+
+    if (!$email || !$password) {
+        return $code;
+    }
+
+    log_user_in($email, $password);
+
+    $code += $email_or_password_invalid;
+
+    return $code;
+}
+
+$error_code = login();
 
 ?>
 
@@ -14,7 +46,7 @@ $activePage = 'login';
 
 <head>
 
-    <?= $header ?>
+    <?= html_get_header() ?>
 
     <title>Sign In | The One App</title>
 
@@ -24,7 +56,7 @@ $activePage = 'login';
 
     <div class="page">
 
-        <?= $navbar ?>
+        <?= html_get_navbar() ?>
 
         <main class="auth">
 
@@ -40,6 +72,11 @@ $activePage = 'login';
                         Welcome back. Please enter your details.
                     </p>
 
+
+                    <?php if ($error_code & $email_or_password_invalid): ?>
+                        <div class="error">Email or password is incorrect</div>
+                    <?php endif ?>
+
                     <form method="POST" class="auth__form">
 
                         <label class="form-group">
@@ -48,13 +85,8 @@ $activePage = 'login';
                                 Email
                             </span>
 
-                            <input
-                                type="email"
-                                name="email"
-                                value="<?= htmlspecialchars($email) ?>"
-                                class="form-group__input"
-                                required
-                            >
+                            <input type="email" name="email" value="<?= htmlspecialchars($email) ?>"
+                                class="form-group__input" required>
 
                         </label>
 
@@ -64,17 +96,12 @@ $activePage = 'login';
                                 Password
                             </span>
 
-                            <input
-                                type="password"
-                                name="password"
-                                value=""
-                                class="form-group__input"
-                                required
-                            >
+                            <input value="<?= $password ?>" type="password" name="password" value=""
+                                class="form-group__input" required>
 
                         </label>
 
-                        <button type="submit" class="button button--large button--full">
+                        <button type="submit" class="button button--large button button--large button--full">
                             Sign In
                         </button>
 
@@ -93,7 +120,7 @@ $activePage = 'login';
 
         </main>
 
-        <?= $footer ?>
+        <?= html_get_footer() ?>
 
     </div>
 

@@ -2,6 +2,7 @@
 + user_id (string:64)
 * email (string:100) unique
 * password_hash (string)
+* salt (string:16)
 * two_factor_enabled (bool) = false
 * biometric_token (string?)
 * role (string:20) = user // user, advisor, manager

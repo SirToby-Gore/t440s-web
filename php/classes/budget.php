@@ -13,33 +13,37 @@ class Budget
         public float $notification_threshold,
     ) {}
 
-    public static function from_id(mysqli $connection, string $budget_id): ?self
+    public static function from_id(string $budget_id): ?self
     {
-        $statement = $connection->prepare('SELECT * FROM `Budgets` WHERE `budget_id` = ?');
-        $statement->bind_param('s', $budget_id);
-        $statement->execute();
-        $result = $statement->get_result()->fetch_assoc();
+        global $conn;
+        $stmt = $conn->prepare('SELECT * FROM `Budgets` WHERE `budget_id` = ?');
+        $stmt->bind_param('s', $budget_id);
+        $stmt->execute();
+        $result = $stmt->get_result()->fetch_assoc();
         return $result ? new self(...$result) : null;
     }
 
-    public function create(mysqli $connection): bool
+    public function create(): bool
     {
-        $statement = $connection->prepare('INSERT INTO `Budgets` (`budget_id`, `user_id`, `category`, `limit_amount`, `current_spending`, `notification_threshold`) VALUES (?, ?, ?, ?, ?, ?)');
-        $statement->bind_param('sssddd', $this->budget_id, $this->user_id, $this->category, $this->limit_amount, $this->current_spending, $this->notification_threshold);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('INSERT INTO `Budgets` (`budget_id`, `user_id`, `category`, `limit_amount`, `current_spending`, `notification_threshold`) VALUES (?, ?, ?, ?, ?, ?)');
+        $stmt->bind_param('sssddd', $this->budget_id, $this->user_id, $this->category, $this->limit_amount, $this->current_spending, $this->notification_threshold);
+        return $stmt->execute();
     }
 
-    public function update(mysqli $connection): bool
+    public function update(): bool
     {
-        $statement = $connection->prepare('UPDATE `Budgets` SET `user_id` = ?, `category` = ?, `limit_amount` = ?, `current_spending` = ?, `notification_threshold` = ? WHERE `budget_id` = ?');
-        $statement->bind_param('ssddds', $this->user_id, $this->category, $this->limit_amount, $this->current_spending, $this->notification_threshold, $this->budget_id);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('UPDATE `Budgets` SET `user_id` = ?, `category` = ?, `limit_amount` = ?, `current_spending` = ?, `notification_threshold` = ? WHERE `budget_id` = ?');
+        $stmt->bind_param('ssddds', $this->user_id, $this->category, $this->limit_amount, $this->current_spending, $this->notification_threshold, $this->budget_id);
+        return $stmt->execute();
     }
 
-    public function delete(mysqli $connection): bool
+    public function delete(): bool
     {
-        $statement = $connection->prepare('DELETE FROM `Budgets` WHERE `budget_id` = ?');
-        $statement->bind_param('s', $this->budget_id);
-        return $statement->execute();
+        global $conn;
+        $stmt = $conn->prepare('DELETE FROM `Budgets` WHERE `budget_id` = ?');
+        $stmt->bind_param('s', $this->budget_id);
+        return $stmt->execute();
     }
 }

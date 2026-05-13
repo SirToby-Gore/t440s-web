@@ -1,154 +1,220 @@
 <?php
 
-$header = <<<HTML
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+function html_get_header(): string
+{
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    $styles = '';
+    // $styles = str_replace(["\n", '  '], '', file_get_contents(__DIR__ . '/../css/styles.css'));
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+    return <<<HTML
+        <link rel="stylesheet" href="/css/styles.css">
+        <style>{$styles}</style>
 
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="shortcut icon" href="/favicon.jpg" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>The One App</title>
-HTML;
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        >
+
+        <link rel="shortcut icon" href="/favicon.jpg" type="image/x-icon">
+
+        <title>The One App</title>
+    HTML;
+}
 
 
-$logo = <<<HTML
-    <a href="/" class="logo">
-        <img class="logo__img" src="/favicon.jpg">
-    </a>
-HTML;
+function html_get_logo(): string
+{
+    return <<<HTML
+        <a href="/" class="logo">
+            <img class="logo__img" src="/favicon.jpg">
+        </a>
+    HTML;
+}
 
+function get_user_dashboard(): string
+{
+    global $account;
 
-$navbar = <<<HTML
-    <header class="navbar">
+    return match ($account->user->role) {
+        'user' => 'user',
+        'finance' => 'finance-adviser',
+        'manager' => 'managers',
+    };
+}
 
-        {$logo}
+function html_get_navbar(): string
+{
+    global $account;
 
-        <nav class="navbar__nav">
+    $logo = html_get_logo();
 
-            <a href="/about" class="navbar__link">
-                ABOUT
+    $user_section = <<<HTML
+        <a href="/login" class="navbar__signin">
+            SIGN IN
+        </a>
+
+        <a href="/signup" class="button button--primary button--small">
+            SIGN UP
+        </a>
+    HTML;
+
+    if ($account) {
+        $user_dashboard = get_user_dashboard();
+
+        $user_section = <<<HTML
+            <a href="/{$user_dashboard}">
+                Dashboard
             </a>
 
-            <a href="/features" class="navbar__link">
-                FEATURES
+            <a href="/login?logout">
+                Logout
             </a>
+        HTML;
+    }
 
-            <a href="/support" class="navbar__link">
-                SUPPORT
-            </a>
+    return <<<HTML
+        <header class="navbar">
 
-            <a href="/faq" class="navbar__link">
-                FAQ
-            </a>
+            {$logo}
 
-            <a href="/blog" class="navbar__link">
-                BLOG
-            </a>
+            <nav class="navbar__nav">
 
-        </nav>
+                <a href="/home/about.php" class="navbar__link">
+                    ABOUT
+                </a>
 
-        <div class="navbar__actions">
+                <a href="/home/features.php" class="navbar__link">
+                    FEATURES
+                </a>
 
-            <a href="/login" class="navbar__signin">
-                SIGN IN
-            </a>
+                <a href="/home/support.php" class="navbar__link">
+                    SUPPORT
+                </a>
 
-            <a href="/signup" class="button button--primary button--small">
-                SIGN UP
-            </a>
+                <a href="/home/faq.php" class="navbar__link">
+                    FAQ
+                </a>
 
-        </div>
+                <a href="/home/blog.php" class="navbar__link">
+                    BLOG
+                </a>
 
-    </header>
-HTML;
+            </nav>
 
+            <div class="navbar__actions">
 
-$footer = <<<HTML
-    <footer class="footer">
-
-        <div class="footer__brand">
-
-            <h2 class="footer__logo">
-                LOGO
-            </h2>
-
-            <p class="footer__quote">
-                Take control of your finances with The One App.
-            </p>
-
-            <div class="footer__socials">
-
-                <span class="footer__social-icon"></span>
-                <span class="footer__social-icon"></span>
-                <span class="footer__social-icon"></span>
-                <span class="footer__social-icon"></span>
+                {$user_section}
 
             </div>
 
-        </div>
+        </header>
+    HTML;
+}
 
-        <div class="footer__column">
 
-            <h3 class="footer__heading">
-                CONTACT US
-            </h3>
+function html_get_footer(): string
+{
+    $logo = html_get_logo();
 
-            <p class="footer__text">
-                support@theoneapp.com
-            </p>
+    return <<<HTML
+        <footer class="footer">
 
-            <p class="footer__text">
-                +44 0000 000000
-            </p>
+            <div class="footer__brand">
 
-        </div>
+                {$logo}
 
-        <div class="footer__column">
+                <p class="footer__quote">
+                    Take control of your finances with The One App.
+                </p>
 
-            <h3 class="footer__heading">
-                LINKS
-            </h3>
+                <div class="footer__socials">
 
-            <a href="/" class="footer__link">HOME</a>
-            <a href="/about" class="footer__link">ABOUT</a>
-            <a href="/features" class="footer__link">FEATURES</a>
-            <a href="/faq" class="footer__link">FAQ</a>
-            <a href="/support" class="footer__link">SUPPORT</a>
-            <a href="/blog" class="footer__link">BLOG</a>
+                    <a href="twitter">
+                        <span class="footer__social-icon">
+                            <img src="" alt="">
+                        </span>
+                    </a>
+                    <a href="linkedin">
+                        <span class="footer__social-icon">
+                            <img src="" alt="">
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="footer__social-icon">
+                            <img src="" alt="">
+                        </span>
+                    </a>
+                    <a href="">
+                        <span class="footer__social-icon">
+                            <img src="" alt="">
+                        </span>
+                    </a>
 
-        </div>
+                </div>
 
-        <div class="footer__column">
+            </div>
 
-            <h3 class="footer__heading">
-                LEGAL
-            </h3>
+            <div class="footer__column">
 
-            <a href="#" class="footer__link">
-                TERMS OF SERVICE
-            </a>
+                <h3 class="footer__heading">
+                    CONTACT US
+                </h3>
 
-            <a href="#" class="footer__link">
-                PRIVACY POLICY
-            </a>
+                <a class="footer__text" href="email:support@theoneapp.com">
+                    support@theoneapp.com
+                </a>    
 
-            <a href="#" class="footer__link">
-                COOKIES
-            </a>
+                <a class="footer__text" href="tel:+44 0000 000000">
+                    +44 0000 000000
+                </a>
 
-            <a href="#" class="footer__link">
-                EQUALITY AND DIVERSITY
-            </a>
+            </div>
 
-        </div>
+            <div class="footer__column">
 
-    </footer>
-HTML;
+                <h3 class="footer__heading">
+                    LINKS
+                </h3>
+
+                <a href="/home/" class="footer__link">HOME</a>
+                <a href="/home/about.php" class="footer__link">ABOUT</a>
+                <a href="/home/features.php" class="footer__link">FEATURES</a>
+                <a href="/home/faq.php" class="footer__link">FAQ</a>
+                <a href="/home/support.php" class="footer__link">SUPPORT</a>
+                <a href="/home/blog.php" class="footer__link">BLOG</a>
+
+            </div>
+
+            <div class="footer__column">
+
+                <h3 class="footer__heading">
+                    LEGAL
+                </h3>
+
+                <a href="/legal/tos.php" class="footer__link">
+                    TERMS OF SERVICE
+                </a>
+
+                <a href="/legal/privacy.php" class="footer__link">
+                    PRIVACY POLICY
+                </a>
+
+                <a href="/legal/cookies.php" class="footer__link">
+                    COOKIES
+                </a>
+
+                <a href="/legal/equality.php" class="footer__link">
+                    EQUALITY AND DIVERSITY
+                </a>
+
+            </div>
+
+        </footer>
+    HTML;
+}

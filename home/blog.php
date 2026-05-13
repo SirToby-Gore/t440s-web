@@ -11,7 +11,7 @@ $activePage = 'blog';
 
 <head>
 
-    <?= $header ?>
+    <?= html_get_header() ?>
 
     <title>Blog | The One App</title>
 
@@ -22,7 +22,7 @@ $activePage = 'blog';
     <div class="page">
 
         <!-- NAVBAR -->
-        <?= $navbar ?>
+        <?= html_get_navbar() ?>
 
         <!-- BLOG -->
         <main class="blog section">
@@ -30,10 +30,6 @@ $activePage = 'blog';
             <div class="container">
 
                 <div class="blog__header">
-
-                    <span class="section-label">
-                        BLOG
-                    </span>
 
                     <h1 class="section-title">
                         Financial tips, guides, and updates
@@ -49,24 +45,24 @@ $activePage = 'blog';
 
                 <div class="blog__grid">
 
-                    <article class="blog-card">
+                    <article class="card">
 
-                        <div class="blog-card__content">
+                        <div class="card__content">
 
-                            <span class="blog-card__category">
+                            <span class="card__tag">
                                 SAVING
                             </span>
 
-                            <h2 class="blog-card__title">
+                            <h2 class="card__title">
                                 5 simple ways to save more money each month
                             </h2>
 
-                            <p class="blog-card__text">
+                            <p class="card__text">
                                 Learn practical strategies to reduce unnecessary
                                 spending and grow your savings consistently.
                             </p>
 
-                            <a href="#" class="blog-card__link">
+                            <a href="#" class="card__link">
                                 Read More
                             </a>
 
@@ -74,24 +70,24 @@ $activePage = 'blog';
 
                     </article>
 
-                    <article class="blog-card">
+                    <article class="card">
 
-                        <div class="blog-card__content">
+                        <div class="card__content">
 
-                            <span class="blog-card__category">
+                            <span class="card__tag">
                                 BUDGETING
                             </span>
 
-                            <h2 class="blog-card__title">
+                            <h2 class="card__title">
                                 How to build a budget that actually works
                             </h2>
 
-                            <p class="blog-card__text">
+                            <p class="card__text">
                                 Create a realistic financial plan that fits
                                 your lifestyle and long-term goals.
                             </p>
 
-                            <a href="#" class="blog-card__link">
+                            <a href="#" class="card__link">
                                 Read More
                             </a>
 
@@ -99,24 +95,24 @@ $activePage = 'blog';
 
                     </article>
 
-                    <article class="blog-card">
+                    <article class="card">
 
-                        <div class="blog-card__content">
+                        <div class="card__content">
 
-                            <span class="blog-card__category">
+                            <span class="card__tag">
                                 FINANCE
                             </span>
 
-                            <h2 class="blog-card__title">
+                            <h2 class="card__title">
                                 Understanding your spending habits
                             </h2>
 
-                            <p class="blog-card__text">
+                            <p class="card__text">
                                 Discover how tracking your purchases can help
                                 improve financial decision-making.
                             </p>
 
-                            <a href="#" class="blog-card__link">
+                            <a href="#" class="card__link">
                                 Read More
                             </a>
 
@@ -131,7 +127,7 @@ $activePage = 'blog';
         </main>
 
         <!-- FOOTER -->
-        <?= $footer ?>
+        <?= html_get_footer() ?>
 
     </div>
 

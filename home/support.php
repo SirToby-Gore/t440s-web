@@ -11,7 +11,7 @@ $activePage = 'support';
 
 <head>
 
-    <?= $header ?>
+    <?= html_get_header() ?>
 
     <title>Support | The One App</title>
 
@@ -21,17 +21,13 @@ $activePage = 'support';
 
     <div class="page">
 
-        <?= $navbar ?>
+        <?= html_get_navbar() ?>
 
         <main class="support section">
 
             <div class="container">
 
                 <div class="support__header">
-
-                    <span class="section-label">
-                        Support
-                    </span>
 
                     <h1 class="section-title">
                         How can we help?
@@ -46,49 +42,49 @@ $activePage = 'support';
 
                 <div class="support__grid">
 
-                    <a href="/faq" class="support-card">
+                    <a href="/faq" class="card">
 
-                        <h2 class="support-card__title">
+                        <h2 class="card__title">
                             FAQs
                         </h2>
 
-                        <p class="support-card__text">
+                        <p class="card__text">
                             Find answers to the most commonly asked questions.
                         </p>
 
                     </a>
 
-                    <a href="mailto:support@theoneapp.com" class="support-card">
+                    <a href="mailto:support@theoneapp.com" class="card">
 
-                        <h2 class="support-card__title">
+                        <h2 class="card__title">
                             Email Support
                         </h2>
 
-                        <p class="support-card__text">
+                        <p class="card__text">
                             Contact our support team directly via email.
                         </p>
 
                     </a>
 
-                    <a href="#" class="support-card">
+                    <a href="#" class="card">
 
-                        <h2 class="support-card__title">
+                        <h2 class="card__title">
                             Account Help
                         </h2>
 
-                        <p class="support-card__text">
+                        <p class="card__text">
                             Get help with login, registration, and account settings.
                         </p>
 
                     </a>
 
-                    <a href="#" class="support-card">
+                    <a href="#" class="card">
 
-                        <h2 class="support-card__title">
+                        <h2 class="card__title">
                             Technical Issues
                         </h2>
 
-                        <p class="support-card__text">
+                        <p class="card__text">
                             Report bugs or issues with the platform.
                         </p>
 
@@ -100,7 +96,7 @@ $activePage = 'support';
 
         </main>
 
-        <?= $footer ?>
+        <?= html_get_footer() ?>
 
     </div>
 

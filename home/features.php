@@ -11,7 +11,7 @@ $activePage = 'features';
 
 <head>
 
-    <?= $header ?>
+    <?= html_get_header() ?>
 
     <title>Features | The One App</title>
 
@@ -21,17 +21,13 @@ $activePage = 'features';
 
     <div class="page">
 
-        <?= $navbar ?>
+        <?= html_get_navbar() ?>
 
         <main class="features section">
 
             <div class="container">
 
                 <div class="features__header">
-
-                    <span class="section-label">
-                        Features
-                    </span>
 
                     <h1 class="section-title">
                         Everything you need to manage your finances
@@ -47,102 +43,102 @@ $activePage = 'features';
 
                 <div class="features__grid">
 
-                    <article class="feature-card">
+                    <article class="card--feature">
 
-                        <div class="feature-card__icon">
+                        <div class="card--feature__icon">
                             $
                         </div>
 
-                        <h2 class="feature-card__title">
+                        <h2 class="card--card__title">
                             Budget Tracking
                         </h2>
 
-                        <p class="feature-card__text">
+                        <p class="card--card__text">
                             Monitor income and expenses in real time with
                             simple and organised budget tracking tools.
                         </p>
 
                     </article>
 
-                    <article class="feature-card">
+                    <article class="card--feature">
 
-                        <div class="feature-card__icon">
+                        <div class="card--feature__icon">
                             %
                         </div>
 
-                        <h2 class="feature-card__title">
+                        <h2 class="card--card__title">
                             Smart Savings
                         </h2>
 
-                        <p class="feature-card__text">
+                        <p class="card--card__text">
                             Create personalised savings goals and track
                             your progress with automated insights.
                         </p>
 
                     </article>
 
-                    <article class="feature-card">
+                    <article class="card--feature">
 
-                        <div class="feature-card__icon">
+                        <div class="card--feature__icon">
                             #
                         </div>
 
-                        <h2 class="feature-card__title">
+                        <h2 class="card--card__title">
                             Spending Analytics
                         </h2>
 
-                        <p class="feature-card__text">
+                        <p class="card--card__text">
                             Understand spending habits with easy-to-read
                             charts, reports, and financial summaries.
                         </p>
 
                     </article>
 
-                    <article class="feature-card">
+                    <article class="card--feature">
 
-                        <div class="feature-card__icon">
+                        <div class="card--feature__icon">
                             !
                         </div>
 
-                        <h2 class="feature-card__title">
+                        <h2 class="card--card__title">
                             Smart Alerts
                         </h2>
 
-                        <p class="feature-card__text">
+                        <p class="card--card__text">
                             Receive reminders and notifications to stay
                             on top of payments, budgets, and savings.
                         </p>
 
                     </article>
 
-                    <article class="feature-card">
+                    <article class="card--feature">
 
-                        <div class="feature-card__icon">
+                        <div class="card--feature__icon">
                             @
                         </div>
 
-                        <h2 class="feature-card__title">
+                        <h2 class="card--card__title">
                             Secure Accounts
                         </h2>
 
-                        <p class="feature-card__text">
+                        <p class="card--card__text">
                             Keep your information protected with secure
                             authentication and account protection tools.
                         </p>
 
                     </article>
 
-                    <article class="feature-card">
+                    <article class="card--feature">
 
-                        <div class="feature-card__icon">
+                        <div class="card--feature__icon">
                             &
                         </div>
 
-                        <h2 class="feature-card__title">
+                        <h2 class="card--card__title">
                             Cross-Device Access
                         </h2>
 
-                        <p class="feature-card__text">
+                        <p class="card--card__text">
                             Access your financial dashboard anytime from
                             desktop, tablet, or mobile devices.
                         </p>
@@ -155,7 +151,7 @@ $activePage = 'features';
 
         </main>
 
-        <?= $footer ?>
+        <?= html_get_footer() ?>
 
     </div>
 
