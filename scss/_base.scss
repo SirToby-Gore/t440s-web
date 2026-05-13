@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-family: $font-main;
+	font-size: 16px;
+	background-color: $white;
+	color: $black;
+	line-height: $line-height-base;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	transition: $standard-transition;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+button,
+input,
+textarea {
+	font: inherit;
+	color: inherit;
+}

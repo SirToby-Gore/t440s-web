@@ -1,0 +1,33 @@
+// Colors
+$primary: #000080;
+$secondary: #47b9ff;
+$tertiary: #85d6a8;
+$white: #ffffff;
+$black: #1a1a1a;
+$text-muted: #555555;
+$border-color: #eef1f5;
+$success-color: #30cc00;
+$error-color: #bb2222;
+
+// Typography
+$font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$line-height-base: 1.6;
+$line-height-tight: 1.2;
+
+// Layout & Spacing
+$container-max: 1200px;
+$radius-sm: 0.5rem;
+$radius-md: 0.75rem;
+$radius-lg: 1.25rem;
+
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 2rem;
+$space-lg: 4rem;
+$space-xl: 6rem;
+
+// Effects
+$standard-transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+$elevation-shadow: 0 10px 30px -10px rgba(0, 0, 128, 0.08);
+$elevation-shadow-hover: 0 20px 40px -12px rgba(0, 0, 128, 0.12);
+

@@ -4,10 +4,10 @@ function html_get_header(): string
 {
 
     $styles = '';
-    // $styles = str_replace(["\n", '  '], '', file_get_contents(__DIR__ . '/../css/styles.css'));
+    $styles = str_replace(["\n", '  '], '', file_get_contents(__DIR__ . '/../css/styles.css'));
 
     return <<<HTML
-        <link rel="stylesheet" href="/css/styles.css">
+        <!-- <link rel="stylesheet" href="/css/styles.css"> -->
         <style>{$styles}</style>
 
         <meta charset="UTF-8">
@@ -21,7 +21,7 @@ function html_get_header(): string
             rel="stylesheet"
         >
 
-        <link rel="shortcut icon" href="/favicon.jpg" type="image/x-icon">
+        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
 
         <title>The One App</title>
     HTML;
@@ -31,9 +31,9 @@ function html_get_header(): string
 function html_get_logo(): string
 {
     return <<<HTML
-        <a href="/" class="logo">
-            <img class="logo__img" src="/favicon.jpg">
-        </a>
+        <div class="logo">
+            <img class="logo__img" src="/favicon.png">
+        </div>
     HTML;
 }
 
@@ -79,41 +79,58 @@ function html_get_navbar(): string
     }
 
     return <<<HTML
-        <header class="navbar">
+        <details class="navbar" open>
 
-            {$logo}
+            <summary class="navbar__summary">
+                {$logo}
+            </summary>
 
-            <nav class="navbar__nav">
+            <div class="navbar__content">
+                <nav class="navbar__nav">
 
-                <a href="/home/about.php" class="navbar__link">
-                    ABOUT
-                </a>
+                    <a href="/home/" class="navbar__link">
+                        HOME
+                    </a>
 
-                <a href="/home/features.php" class="navbar__link">
-                    FEATURES
-                </a>
+                    <a href="/home/about.php" class="navbar__link">
+                        ABOUT
+                    </a>
 
-                <a href="/home/support.php" class="navbar__link">
-                    SUPPORT
-                </a>
+                    <a href="/home/features.php" class="navbar__link">
+                        FEATURES
+                    </a>
 
-                <a href="/home/faq.php" class="navbar__link">
-                    FAQ
-                </a>
+                    <a href="/home/support.php" class="navbar__link">
+                        SUPPORT
+                    </a>
 
-                <a href="/home/blog.php" class="navbar__link">
-                    BLOG
-                </a>
+                    <a href="/home/faq.php" class="navbar__link">
+                        FAQ
+                    </a>
 
-            </nav>
+                    <a href="/home/blog.php" class="navbar__link">
+                        BLOG
+                    </a>
 
-            <div class="navbar__actions">
+                </nav>
 
-                {$user_section}
+                <div class="navbar__actions">
 
+                    {$user_section}
+
+                </div>
             </div>
 
-        </header>
+            <script>
+                const navbar = document.querySelector('.navbar');
+                if (window.innerWidth <= 768) {
+                    navbar.removeAttribute('open');
+                } else {
+                    navbar.setAttribute('open', '');
+                }
+            </script>
+
+        </details>
     HTML;
 }
 

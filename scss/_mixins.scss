@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin card-surface {
+	background-color: $white;
+	border: 1px solid $border-color;
+	border-radius: $radius-lg;
+	padding: $space-md;
+	box-shadow: $elevation-shadow;
+	transition: $standard-transition;
+
+	&:hover {
+		transform: translateY(-5px);
+		box-shadow: $elevation-shadow-hover;
+		border-color: rgba($secondary, 0.3);
+	}
+}
+
+@mixin section-gutter {
+	padding: $space-xl 0;
+	@media (max-width: 768px) {
+		padding: $space-lg 0;
+	}
+}

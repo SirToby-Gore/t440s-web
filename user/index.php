@@ -34,9 +34,13 @@ $monthly_save = UserDashboard::get_spending_by_period($user_id, '1 MONTH');
                 <h1 class="section-title" style="text-align: left; margin-bottom: 2rem;">
                     Welcome back, <?= htmlspecialchars($account->user->name) ?>
                 </h1>
-                
+
                 <a href="pots.php">Pots</a>
                 <a href="tips.php">Tips</a>
+                <a href="profile.php">Profile</a>
+                <a href="budgets.php">budgets</a>
+                <a href="upload_receipt.php">upload receipt</a>
+                <a href="/user/transactions.php" class="card__link text-sm">View all</a>
 
                 <div class="dashboard__grid">
 
